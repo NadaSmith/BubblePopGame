@@ -72,7 +72,7 @@ class Player {
         ctx.fillRect(this.x, this.y, this.radius, 10);*/
 
         ctx.save();
-        ctx.translate(this.x, this.y);
+        ctx.translate(this.x, this.y); //Look up what translate method is used for here!
         ctx.rotate(this.angle);
         if (this.x >= mouse.x) {
             ctx.drawImage(playerLeft, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, 0 - 60, 0 - 45, this.spriteWidth/4, this.spriteHeight/4);     //(image we want to draw, next four arguments indicate area we ant to crop out from the source [only one frame at a time], last four arguments defines where on canvas I want to place cropped out image onto  )
